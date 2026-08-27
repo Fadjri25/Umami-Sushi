@@ -6,7 +6,6 @@ import {
   ArrowUpRight,
   Menu as MenuIcon,
   X,
-  Sparkles,
   MessageCircle,
 } from "lucide-react";
 
@@ -126,7 +125,7 @@ function UmamiLogo({ className = "h-12", light = false }: { className?: string; 
   );
 }
 
-export default function Index() {
+export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState("all");
 
@@ -240,9 +239,6 @@ export default function Index() {
             
             {/* Sisi Kiri: Narasi Editorial */}
             <div className="lg:col-span-7 space-y-6">
-              <div className="inline-flex items-center gap-2 border border-[#971f20]/30 px-3.5 py-1.5 rounded-full bg-[#971f20]/5 text-[#971f20] text-xs font-bold tracking-widest uppercase">
-                <Sparkles size={14} /> Authentic Japanese Taste in Pontianak
-              </div>
 
               <h1 className="text-4xl sm:text-6xl lg:text-7xl font-serif font-bold text-[#1C1917] tracking-tight leading-[1.08]">
                 Keberagaman Rasa <br />
@@ -309,7 +305,7 @@ export default function Index() {
                     Cita Rasa Khas Gurih
                   </h3>
                   <p className="text-xs leading-relaxed opacity-90 max-w-xs mx-auto font-light">
-                    Sajian sushi hangat dan segar yang cocok dinikmati santai bersama keluarga, teman, dan sahabat tercinta.
+                    Sajikan sushi hangat dan segar yang cocok dinikmati santai bersama keluarga, teman, dan sahabat tercinta.
                   </p>
                 </div>
 
