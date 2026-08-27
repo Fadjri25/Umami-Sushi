@@ -103,7 +103,7 @@ function UmamiLogo({ className = "h-12", light = false }: { className?: string; 
           textAnchor="middle"
           fontFamily="serif"
         >
-          うま味
+          すしや
         </text>
       </svg>
 
@@ -138,7 +138,7 @@ export default function Home() {
     "https://wa.me/6285705062644?text=Halo%20Umami%20Sushi,%20saya%20ingin%20memesan%20sushi%20/%20reservasi%20tempat.";
 
   return (
-    <div className="min-h-screen bg-[#FAF7F2] text-[#1C1917] font-sans selection:bg-[#971f20] selection:text-white">
+    <div id="beranda" className="min-h-screen bg-[#FAF7F2] text-[#1C1917] font-sans selection:bg-[#971f20] selection:text-white">
       
       {/* 🟢 TOP ANNOUNCEMENT BAR */}
       <div className="bg-[#971f20] text-white text-[11px] sm:text-xs font-medium py-2 px-4 text-center tracking-wider flex items-center justify-center gap-2">
@@ -153,12 +153,13 @@ export default function Home() {
       {/* 🟢 NAVBAR */}
       <header className="sticky top-0 z-50 bg-[#FAF7F2]/90 backdrop-blur-md border-b border-[#971f20]/15">
         <nav className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-          <a href="#" className="flex items-center gap-3">
+          <a href="#beranda" className="flex items-center gap-3">
             <UmamiLogo />
           </a>
 
           {/* Desktop Nav Links */}
           <div className="hidden md:flex items-center space-x-8 text-xs font-semibold tracking-widest uppercase text-[#1C1917]/80">
+            <a href="#beranda" className="hover:text-[#971f20] transition-colors">Beranda</a>
             <a href="#tentang" className="hover:text-[#971f20] transition-colors">Filosofi</a>
             <a href="#menu" className="hover:text-[#971f20] transition-colors">Daftar Menu</a>
             <a href="#outlet" className="hover:text-[#971f20] transition-colors">Lokasi Cabang</a>
@@ -190,6 +191,13 @@ export default function Home() {
         {/* Mobile Dropdown */}
         {mobileMenuOpen && (
           <div className="md:hidden border-b border-[#971f20]/15 bg-[#FAF7F2] px-6 py-6 space-y-4">
+            <a
+              href="#beranda"
+              onClick={() => setMobileMenuOpen(false)}
+              className="block text-sm font-bold uppercase tracking-wider text-[#1C1917]"
+            >
+              Beranda
+            </a>
             <a
               href="#tentang"
               onClick={() => setMobileMenuOpen(false)}
@@ -253,7 +261,7 @@ export default function Home() {
               <div className="pt-4 flex flex-wrap items-center gap-4">
                 <a
                   href="#menu"
-                  className="bg-[#971f20] text-white px-8 py-4 rounded-full text-xs font-extrabold tracking-widest uppercase hover:bg-[#7a1819] transition-all shadow-lg shadow-[#971f20]/25 hover:-translate-y-0.5"
+                  className="bg-[#971f20] text-white px-8 py-4 rounded-full text-xs font-['Poppins',sans-serif] font-bold tracking-widest uppercase hover:bg-[#7a1819] transition-all shadow-lg shadow-[#971f20]/25 hover:-translate-y-0.5"
                 >
                   Lihat Menu Lengkap
                 </a>
@@ -294,7 +302,7 @@ export default function Home() {
                   <span className="text-xs font-bold tracking-widest uppercase opacity-80">
                     PONTIANAK, KALBAR
                   </span>
-                  <span className="text-2xl font-serif tracking-widest opacity-40">うま味</span>
+                  <span className="text-2xl font-serif tracking-widest opacity-40">すしや</span>
                 </div>
 
                 <div className="text-center my-auto py-8 z-10 space-y-4">
